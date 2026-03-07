@@ -13,7 +13,7 @@ function App() {
   const { scrollYProgress } = useScroll();
 
   useEffect(() => {
-    fetch('https://portfolio-1vjy.onrender.com/api')
+    fetch('https://portfolio-1vjy.onrender.com/api/portfolio')
       .then(res => res.json())
       .then(data => {
         setPortfolio(data);
