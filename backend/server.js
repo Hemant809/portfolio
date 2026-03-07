@@ -7,7 +7,10 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://portfolio-wheat-tau-52.vercel.app"
+}));
+
 app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/portfolio')
@@ -15,14 +18,9 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/portfolio
   .catch(err => console.error('MongoDB connection error:', err));
 
 const portfolioRoutes = require('./routes/portfolio');
+
 app.use('/api', portfolioRoutes);
 
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-import cors from "cors";
-
-app.use(cors({
-  origin: "https://portfolio-wheat-tau-52.vercel.app"
-}));
-
