@@ -45,9 +45,9 @@ function App() {
       <Stats />
       <About portfolio={portfolio} />
       <Skills />
-      <Projects projects={portfolio.projects} />
-      <Experience experience={portfolio.experience} />
-      <Education education={portfolio.education} />
+      <Projects projects={portfolio?.projects || []} />
+      <Experience experience={portfolio?.experience || []} />
+      <Education education={portfolio?.education || []} />
       <Contact portfolio={portfolio} />
     </div>
   );
@@ -364,7 +364,7 @@ function Projects({ projects }) {
         Featured Projects
       </motion.h2>
       <div className="projects-grid">
-        {projects.map((project, i) => (
+        {projects?.map((project, i) => (
           <motion.div
             key={i}
             className="project-card"
@@ -423,7 +423,7 @@ function Experience({ experience }) {
         Work Experience
       </motion.h2>
       <div className="timeline">
-        {experience.map((exp, i) => (
+        {experience?.map((exp, i) => (
           <motion.div
             key={i}
             className="timeline-item"
@@ -460,7 +460,7 @@ function Education({ education }) {
         Education
       </motion.h2>
       <div className="education-grid">
-        {education.map((edu, i) => (
+        {education?.map((edu, i) => (
           <motion.div
             key={i}
             className="education-card"
