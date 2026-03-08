@@ -424,6 +424,15 @@ body.light .hero .hero-content p {
   opacity: 0.8;
 }
 
+body.light .stat-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+body.light .stat-card p {
+  color: var(--text-light);
+}
+
 .section {
   padding: 100px 20px;
   max-width: 1200px;
@@ -618,6 +627,10 @@ body.dark .project-card {
   font-size: 0.95rem;
 }
 
+body.light .project-card p {
+  color: var(--text-light);
+}
+
 .tech-tags {
   display: flex;
   flex-direction: column;
@@ -719,6 +732,11 @@ body.dark .timeline-content {
   opacity: 0.85;
 }
 
+body.light .timeline-content h4,
+body.light .timeline-content p {
+  color: var(--text-light);
+}
+
 .education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -796,6 +814,10 @@ body.dark .education-card {
   font-size: 1.1rem;
   position: relative;
   z-index: 1;
+}
+
+body.light .education-card h4 {
+  color: var(--text-light);
 }
 
 .year {
