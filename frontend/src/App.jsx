@@ -508,10 +508,10 @@ function Contact({ portfolio }) {
           <FaEnvelope />
           <a href={`mailto:${portfolio.email}`}>{portfolio.email}</a>
         </motion.div>
-        <motion.div className="contact-item" whileHover={{ scale: 1.05 }}>
+        {/* <motion.div className="contact-item" whileHover={{ scale: 1.05 }}>
           <FaPhone />
           <span>{portfolio.phone}</span>
-        </motion.div>
+        </motion.div> */}
         <motion.div className="contact-item" whileHover={{ scale: 1.05 }}>
           <FaMapMarkerAlt />
           <span>{portfolio.location}</span>
